@@ -1,0 +1,64 @@
+<!--
+    AUTOR: Stefany Hagne Oliveira Santana
+    DATA DE CRIAÇÃO:14/03/2024
+    DATA DE ATUALIZAÇÃO:26/03/2024
+    TEMA:
+        Exemplo de barra de navegação;
+        criando um site com várias abas
+
+        *navegação
+        *link
+        *vinculação com css
+        *botões de interação
+        *animações básicas
+-->
+
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!--
+        <nav> -> serve  para conter o conteúdo de navegação (a maior parte do conteúdo de navegação),
+             como os botões , barra de busca, menus.
+        <main> -> serve para conter o conteúdo principal de um site. 
+        <link> -> vincular documentos ao html
+        atributo rel="stlyes" -> indica a relação de folha de estilização (o tipo de documento é css),
+         que será ultilizado para estilizar um ou mais documentos de html 
+         atributo "href" -> para referenciar o nome do documento que está sendo vinculado.
+
+        <ol>-> serve para criar uma lista ordenada 1. 2. 3.
+        <ul>-> serve para criaruma lista NÃO ordenada  °  °  °
+        <li>-> cria itens
+        <dl>-> cria lista de definições
+        <dt>-> cria título
+        <dd>-> cria descrição
+        <a href="endereço ou nome do arquivo">
+        obs: usar # para não deixar "href=" vázio, pode indicar um link interno
+    -->
+    <nav><!--lugar para navegar pelo site-->
+        <ul><!---->
+            <li><!--cria os itens da lista--><a href="Home.html" class="atual"> Home </a></li>
+            <li><a href="Produtos.html">Produtos</a></li>
+            <li><a href="Contatos.html"> Contatos </a></li>
+            <li><a href="Trabalheconosco.html"> Trabalhe conosco </a></li>
+        </ul>
+    </nav>
+    <main>
+        <section class="conteudoprincipal">
+            <div class="blocoesquerdo"></div>
+
+            <section class="blococentral">
+                <div class="blocotopo"></div>
+                <div class="blocoinferior"></div>
+            </section>
+            <div class="blocodireita"></div>
+        </section>
+    </main>
+    
+</body>
+</html>

@@ -1,0 +1,145 @@
+/*
+    AUTOR: Stefany Hagne Oliveira Santana
+    DATA DE CRIAÇÃO:18/03/2024
+    DATA DE ATUALIZAÇÃO:26/03/2024
+    TEMA/RESUMO:
+        documento de css, que vai estilizar os documentos (páginas) do html do site de exemplo de loja com efeitos de navegação 
+*/
+/*
+    resetar os valores que são padrão com o seletor universal (*)
+*/
+
+
+*{
+    margin: 0%;/*é o espaço relativo de um elemento e a borda da tela*/
+    padding: 0%;/*é o espaço relativo entre elementos que estejam dentro de um mesmo bloco*/
+    font-size: xx-large;/*definir o tamanho da letra*/
+}
+/*definindo o tamanho da body para ter um referência de tamanho para os outros elementos*/
+body{
+    width: 98vw;/*para definir a largura*/
+    height: 98vh;/*para definir a altura*/
+    /*para definir uma bodar omitindo os valores:display: 
+    border-size
+    border-color
+    border-style
+;*/
+    margin-left: 1vw;
+    margin-top: 1vh;
+    /*definindo as margens da esq e do top centralizando a tela body*/
+    border: 2px rgb(39, 25, 14) solid;
+}
+/*seletor de elemento é qualquer seletor que tenha o nome de uma tag. ex. abaixo*/
+nav{
+    width: 100%;
+    height: 5%;
+    border: 1px rgb(39, 25, 14) solid;
+    background-color: #92603a;/*para definir a cor de fundo do bloco com transparência */
+
+}
+
+
+
+/*definindo alinhamento dos blocos filhos*/
+main{
+    width: 100%;
+    height: 94%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+/*definindo area do conteudo prinpal*/
+.conteudoprincipal{
+    width: 99%;/*largura*/
+    height: 99%;/*altura*/
+    border: 1px rgb(39, 25, 14) solid;/*bordar*/
+    background-color: #92603a;/*cor de fundo*/
+    display: flex;
+}
+.blocoesquerdo{
+    width: 48%;
+    height: 98%;
+    border: 1px rgb(39, 25, 14) solid;
+    background-color: #f8bc9e;
+    margin-top: 0.4%;
+    margin-left: 0.4%;
+}
+.blococentral, .blocodireita{
+    width: 25%;
+    height: 98%;
+    border: 1px rgb(39, 25, 14) solid;
+    background-color:  #f8bc9e;
+    margin-top: 0.4%;
+    margin-left: 0.4%;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+.blocotopo, .blocoinferior{
+    width: 98%;
+    height: 49%;
+    border: 1px rgb(39, 25, 14) solid;
+    margin-left: 0.7%;
+    margin-top: 0.7%;
+    background-color:  #f8bc9e;
+}
+
+.blocoinferior{
+    margin-top: 0.8%;
+}
+
+/*ESTILIZAR A BARRA DE NAVEGAÇÃO
+
+para estilizar a lista como um todo*/
+
+ul{
+    list-style-type: none;/*definir o marcador da lista*/
+    margin: 0;/*definir uma distancia relativa entre um elemento e seu elemento e a borda do seu pai na hieraquia */
+    padding: 0;/*define a distância relativa entre elementos dentro de um bloco*/
+    overflow: hidden;/*define o que acontece quando um conteudo de um elemento "transborda" o tamanho da caixa*/
+    background-color: rgb(255, 182, 152);/*define a cor de fundo o bloco */
+}
+
+/*para obrigar o elemento a flutuar na horizontal a partir da esquerda*/
+
+li{
+    float: left;
+    border-right: 1px rgb(39, 25, 14) solid;
+}
+
+/*usar um subseletor para escolher um elemento específico na hieraquia, nesse caso, o último botão da barra*/
+
+li:last-child{
+    /*esconder a borda direita*/
+    border-right: none;
+    /*para alinhar o objeto a direita*/
+    float: right;
+    /*definindo borda a esquerda*/
+    border-left: 1px rgb(39, 25, 14) solid;
+}
+/*estilizar os links*/
+/*subseletor, quando usamos uma referencia com mais de um elemento, geralmente para especificar um elemento filho dentro de um elemento pai*/
+li a{
+    display: block;/*para definir e facilitar a organização de blocos*/
+    color:rgb(110, 51, 11);/*para definir a cor da letra*/
+    text-align: center;/*alinhar o texto*/
+    padding: 2px 12px;/*para definir a distancia entre elementos*/
+    text-decoration: none;/*para definir efeitos de decoração de texto com o tachado sublinhado*/
+}
+/*definir um evento para ressaltar o texto quando o mouse passa por cima do elemento*/
+li a:hover{
+    background-color:  rgb(255, 221, 198);
+}
+
+/*criando classe para definir a página atual*/
+
+.atual{
+    background-color:  rgb(255, 221, 198);
+}
+
+/*definindo uma interação visual para o click do botão*/
+
+li a:active{
+    background-color: rgb(255, 235, 227);
+    color: rgb(156, 51, 51);
+}
